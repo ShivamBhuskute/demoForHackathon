@@ -10,22 +10,21 @@ function Sidebar() {
 
     return (
         <div className="flex">
-            {/* Sidebar */}
             <div
                 className={`bg-gray-800 text-white h-screen p-5 pt-8 ${
-                    isOpen ? "w-64" : "w-20"
+                    isOpen ? "w-60" : "w-20"
                 } duration-300 relative`}
             >
                 {/* Toggle Button */}
                 <div
-                    className="absolute top-6 -right-3 bg-gray-800 p-2 rounded-full cursor-pointer"
+                    className="absolute top-6 text-white hover:bg-white hover:text-black p-2 rounded-full cursor-pointer mb-10"
                     onClick={toggleSidebar}
                 >
                     <FiMenu size={24} />
                 </div>
 
                 {/* Sidebar Content */}
-                <div className="mt-10">
+                <div className="mt-24">
                     <div
                         className={`flex items-center space-x-4 ${
                             isOpen ? "" : "justify-center"
