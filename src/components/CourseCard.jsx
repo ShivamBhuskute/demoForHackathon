@@ -50,10 +50,10 @@ function CourseCard({ title, progress, lessons, assignments, students }) {
 
             {/* Right Section - Buttons */}
             <div className="flex space-x-3">
-                <button className="bg-gray-100 text-gray-500 px-4 py-2 rounded-md">
+                <button className="bg-gray-100 text-gray-500 px-4 py-2 rounded-md hover:border border-green-500">
                     Skip
                 </button>
-                <button className="bg-green-500 text-white px-4 py-2 rounded-md">
+                <button className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-white hover:text-green-500 hover:border border-green-500">
                     Continue
                 </button>
             </div>
