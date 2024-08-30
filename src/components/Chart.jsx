@@ -8,17 +8,18 @@ const data = [
   // Add more data points here
 ];
 
-function Chart() {
+function Chart({ width = 600, height = 300, strokeColor = "#8884d8" }) {
   return (
-    <LineChart width={600} height={300} data={data}>
+    <LineChart width={width} height={height} data={data}>
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="name" />
       <YAxis />
       <Tooltip />
       <Legend />
-      <Line type="monotone" dataKey="hours" stroke="#8884d8" />
+      <Line type="monotone" dataKey="hours" stroke={strokeColor} />
     </LineChart>
   );
 }
+
 
 export default Chart;
