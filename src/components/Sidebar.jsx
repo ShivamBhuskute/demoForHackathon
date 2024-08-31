@@ -17,7 +17,7 @@ function Sidebar() {
             >
                 {/* Toggle Button */}
                 <div
-                    className="absolute top-6 text-white hover:bg-white hover:text-black p-2 rounded-full cursor-pointer mb-10"
+                    className="absolute top-6 text-white hover:bg-white hover:text-black p-2 rounded-full cursor-pointer"
                     onClick={toggleSidebar}
                 >
                     <FiMenu size={24} />
@@ -25,6 +25,18 @@ function Sidebar() {
 
                 {/* Sidebar Content */}
                 <div className="mt-24">
+                    {isOpen && (
+                        <div className="flex items-center justify-center space-x-4 mt-2">
+                            <div className=" p-1 rounded-lg shadow-lg">
+                                <img
+                                    src="https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=338&ext=jpg&ga=GA1.1.2113030492.1720310400&semt=sph"
+                                    alt="profile pic"
+                                    className="rounded-full size-20"
+                                />
+                                <p className="mt-1">James</p>
+                            </div>
+                        </div>
+                    )}
                     <div
                         className={`flex items-center space-x-4 ${
                             isOpen ? "" : "justify-center"
