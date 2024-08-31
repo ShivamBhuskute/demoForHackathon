@@ -12,13 +12,14 @@ import App from "./App";
 import "./index.css";
 import Layout from "./Layout";
 import Home from "./pages/Home";
+import ParentDashboard from "./components/parentDashboard/ParentDashboard";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" element={<Layout />}>
             <Route path="" element={<Home />} />
             <Route path="app" element={<App />} />
-            {/* <Route path="parents" element={<Parents />} /> */}
+            <Route path="parents" element={<ParentDashboard />} />
             {/* <Route path="uni" element={<Uni />} /> */}
         </Route>
     )

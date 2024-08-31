@@ -7,6 +7,9 @@ function Home() {
     const handleClickButton = () => {
         navigate("/app");
     };
+    const handleClickButtonParent = () => {
+        navigate("/parents");
+    };
     return (
         <>
             <div>Home</div>
@@ -17,7 +20,8 @@ function Home() {
                 Student
             </button>{" "}
             <br />
-            <button className="mt-4 p-2 bg-blue-600 text-white rounded  hover:bg-blue-100 hover:text-black">
+            <button className="mt-4 p-2 bg-blue-600 text-white rounded  hover:bg-blue-100 hover:text-black"
+            onClick={handleClickButtonParent}>
                 Parent
             </button>{" "}
             <br />
