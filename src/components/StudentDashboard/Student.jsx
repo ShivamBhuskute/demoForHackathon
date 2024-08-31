@@ -9,15 +9,15 @@ import Class from "../Class";
 
 function Student() {
     return (
-        <div className="flex min-h-screen overflow-hidden">
+        <div className="flex min-h-screen overflow-hidden flex-auto sm:flex-row">
             {/* Sidebar */}
             <Sidebar />
 
             {/* Main Content */}
-            <div className="grid grid-cols-12 p-6 w-full space-x-5">
+            <div className="grid grid-cols-1 sm:grid-cols-12 p-6 w-full space-x-5 space-y-5 sm:space-y-10 ">
                 {/* Left Section (4/12) */}
                 <div className="col-span-4 flex flex-col">
-                    <header className="ml-10">
+                    <header className=" sm:ml-10">
                         <h1 className="text-3xl font-bold">
                             Hello, Student 👋
                         </h1>
@@ -27,7 +27,7 @@ function Student() {
                     </header>
 
                     {/* Course Section */}
-                    <section className="grid grid-cols-1 gap-6 mt-6 ml-10">
+                    <section className="grid grid-cols-1 gap-6 mt-6  sm:ml-10">
                         <CourseCard
                             title="Biology Molecular"
                             progress={79}
@@ -44,7 +44,7 @@ function Student() {
                         />
                     </section>
 
-                    <div className="ml-10 mt-10">
+                    <div className="sm:ml-10 mt-10">
                         <Class
                             className="Introduction to Biology"
                             studentsCount={45}
@@ -55,9 +55,11 @@ function Student() {
 
                 {/* Right Section (8/12) */}
 
-                <div className="col-span-8 mt-6 flex justify-between flex-col bg-slate-200 rounded-lg">
-                    <div className="flex flex-row space-x-20">
-                        <div className="ml-4 mt-4">
+                <div className="col-span-8 mt-6 flex flex-col bg-slate-200 rounded-lg">
+                    {/* Top Section with Profile and Cards */}
+                    <div className="flex flex-col sm:flex-row justify-between space-y-6 sm:space-y-0 sm:space-x-20 p-4">
+                        {/* Profile Card */}
+                        <div className="w-full sm:w-auto">
                             <ProfileCard
                                 name={"arka"}
                                 courses={10}
@@ -65,21 +67,19 @@ function Student() {
                             />
                         </div>
 
-                        <div>
-                            <div className="mt-4">
-                                <Exp />
+                        {/* Experience and Set Target Cards */}
+                        <div className="w-full sm:w-auto">
+                            <div className="mt-4 sm:mt-0">
+                                <Exp exp={"2400XP"} />
                             </div>
                             <div className="flex flex-col space-y-5 mt-5">
-                                {" "}
-                                {/* Stack the cards vertically */}
-                                {/* <ConsultationCard /> */}
                                 <SetTargetCard />
                             </div>
                         </div>
                     </div>
 
-                    {/* Chart remains full-width below */}
-                    <div className="mt-6 shadow-lg rounded-lg bg-white">
+                    {/* Full-width Chart Section */}
+                    <div className="mt-6 shadow-lg rounded-lg bg-white p-4 w-full invisible sm:visible">
                         <Chart />
                     </div>
                 </div>
