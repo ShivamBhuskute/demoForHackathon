@@ -14,17 +14,17 @@ const ParentDashboard = () => {
             {/* Main Content */}
             <div className="flex-1 p-6">
                 {/* Header */}
-                <div className="flex justify-between items-center mb-6 ">
+                <div className="flex justify-between items-center mb-6">
                     <div className="bg-slate-400 rounded-lg mr-3 ">
-                        <h1 className="text-3xl text-black font-semibold mt-2">
+                        <h1 className="text-2xl sm:text-3xl text-black font-semibold mt-2 text-center sm:text-left sm:ml-0">
                             Welcome back, James 👋
                         </h1>
-                        <p className="text-black mt-4 mb-2">
+                        <p className="text-black mt-4 mb-2 text-center p-2">
                             You've learned 70% of your goal this week! Keep it
                             up and improve your progress.
                         </p>
                     </div>
-                    <div className="flex items-center space-x-4">
+                    <div className="flex items-center space-x-4 invisible sm:visible">
                         <div className="bg-white p-1 rounded-lg shadow-lg">
                             <img
                                 src="https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=338&ext=jpg&ga=GA1.1.2113030492.1720310400&semt=sph"

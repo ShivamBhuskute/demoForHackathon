@@ -5,10 +5,13 @@ function Home() {
     const navigate = useNavigate();
 
     const handleClickButton = () => {
-        navigate("/app");
+        navigate("/student");
     };
     const handleClickButtonParent = () => {
         navigate("/parents");
+    };
+    const handleClickButtonUni = () => {
+        navigate("/university");
     };
     return (
         <>
@@ -20,12 +23,17 @@ function Home() {
                 Student
             </button>{" "}
             <br />
-            <button className="mt-4 p-2 bg-blue-600 text-white rounded  hover:bg-blue-100 hover:text-black"
-            onClick={handleClickButtonParent}>
+            <button
+                className="mt-4 p-2 bg-blue-600 text-white rounded  hover:bg-blue-100 hover:text-black"
+                onClick={handleClickButtonParent}
+            >
                 Parent
             </button>{" "}
             <br />
-            <button className="mt-4 p-2 bg-blue-600 text-white rounded  hover:bg-blue-100 hover:text-black">
+            <button
+                className="mt-4 p-2 bg-blue-600 text-white rounded  hover:bg-blue-100 hover:text-black"
+                onClick={handleClickButtonUni}
+            >
                 UNI
             </button>
         </>
