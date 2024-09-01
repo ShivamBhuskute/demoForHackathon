@@ -12,15 +12,16 @@ import App from "./App";
 import "./index.css";
 import Layout from "./Layout";
 import Home from "./pages/Home";
-import ParentDashboard from "./components/parentDashboard/ParentDashboard";
-
+import ParentDash from "./pages/ParentDash";
+import UniversityDash from "./pages/UniversityDash";
+import StudentDash from "./pages/StudentDash";
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" element={<Layout />}>
             <Route path="" element={<Home />} />
-            <Route path="app" element={<App />} />
-            <Route path="parents" element={<ParentDashboard />} />
-            {/* <Route path="uni" element={<Uni />} /> */}
+            <Route path="student" element={<StudentDash />} />
+            <Route path="parents" element={<ParentDash />} />
+            <Route path="university" element={<UniversityDash />} />
         </Route>
     )
 );
