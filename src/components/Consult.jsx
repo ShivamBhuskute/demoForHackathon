@@ -21,7 +21,7 @@ function SetTargetCard() {
             <p className="text-gray-600">
                 You haven't set any targets yet. Let's create one.
             </p>
-            <button className="bg-green-500 text-white mt-4 px-4 py-2 rounded-md">
+            <button className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-white hover:text-green-500 hover:border border-green-500">
                 Set Targets
             </button>
         </div>

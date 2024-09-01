@@ -6,7 +6,11 @@ function Experience({ exp }) {
             <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
                 {/* Profile Image */}
                 <div className="w-16 h-16 bg-gray-200 rounded-full">
-                    {/* Replace with an actual image by adding <img> tag */}
+                    <img
+                        src="https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=338&ext=jpg&ga=GA1.1.2113030492.1720310400&semt=sph"
+                        alt="profile pic"
+                        className="rounded-full size-16"
+                    />{" "}
                 </div>
                 {/* Profile Info */}
                 <div className="flex-1">

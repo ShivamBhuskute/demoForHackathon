@@ -6,7 +6,11 @@ function ProfileCard({ name, courses, certifications }) {
             <div className="flex flex-col items-center space-y-8">
                 {/* Profile Image */}
                 <div className="w-24 h-24 bg-gray-200 rounded-full">
-                    {/* Replace with an actual image by adding <img> tag */}
+                    <img
+                        src="https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=338&ext=jpg&ga=GA1.1.2113030492.1720310400&semt=sph"
+                        alt="profile pic"
+                        className="rounded-full size-24"
+                    />
                 </div>
                 {/* Profile Info */}
                 <div className="text-center">
