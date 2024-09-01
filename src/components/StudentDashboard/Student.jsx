@@ -3,7 +3,7 @@ import Sidebar from "../Sidebar";
 import CourseCard from "../CourseCard";
 import Chart from "../Chart";
 import ProfileCard from "../ProfileCard";
-import Exp from "../EXP";
+import Experience from "../Experience";
 import { ConsultationCard, SetTargetCard } from "../Consult";
 import Class from "../Class";
 
@@ -70,7 +70,7 @@ function Student() {
                         {/* Experience and Set Target Cards */}
                         <div className="w-full sm:w-auto">
                             <div className="mt-4 sm:mt-0">
-                                <Exp exp={"2400XP"} />
+                                <Experience exp={"2400XP"} />
                             </div>
                             <div className="flex flex-col space-y-5 mt-5">
                                 <SetTargetCard />
