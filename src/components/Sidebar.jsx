@@ -107,7 +107,7 @@ function Sidebar() {
                         {isOpen && <span>Consultants</span>}
                     </div>
                     <div
-                        className={`flex items-center space-x-4 mt-6 ${
+                        className={`flex items-end space-x-4 mt-6 ${
                             isOpen ? "" : "justify-center"
                         }`}
                     >
