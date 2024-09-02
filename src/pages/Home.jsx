@@ -13,6 +13,9 @@ function Home() {
     const handleClickButtonUni = () => {
         navigate("/university");
     };
+    const handleClickButtonTeacher = () => {
+        navigate("/teacher");
+    };
     return (
         <>
             <div>Home</div>
@@ -35,6 +38,13 @@ function Home() {
                 onClick={handleClickButtonUni}
             >
                 UNI
+            </button>
+            <br />
+            <button
+                className="mt-4 p-2 bg-blue-600 text-white rounded  hover:bg-blue-100 hover:text-black"
+                onClick={handleClickButtonTeacher}
+            >
+                Teachers
             </button>
         </>
     );

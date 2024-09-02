@@ -22,6 +22,7 @@ const router = createBrowserRouter(
             <Route path="student" element={<StudentDash />} />
             <Route path="parents" element={<ParentDash />} />
             <Route path="university" element={<UniversityDash />} />
+            {/* <Route path="teacher" element={<UniversityDash />} /> */}
         </Route>
     )
 );
