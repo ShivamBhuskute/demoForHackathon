@@ -67,7 +67,8 @@
 // export default University;
 import React from "react";
 import Sidebar from "../Sidebar";
-
+import AcademicCalendarCard from "./AcademicCalendarCard";
+import Notices from "./Notices";
 function University() {
     return (
         <div className="min-h-screen bg-blue-100 flex overflow-hidden">
@@ -125,12 +126,25 @@ function University() {
                     </div>
 
                     {/* Middle and Right Columns for Large Screens */}
-                    <div className="col-span-2 sm:col-span-1 p-10 bg-yellow-100 rounded-xl text-center shadow-lg cursor-pointer h-80 sm:h-full">
-                        Calender
+                    <div className="col-span-2 sm:col-span-1 bg-yellow-100 rounded-xl text-center shadow-lg cursor-pointer h-80 sm:h-full">
+                        <AcademicCalendarCard/>
                     </div>
                 </div>
-                <div className="p-20 bg-blue-400 rounded-xl text-center shadow-lg cursor-pointer">
-                    Notice
+
+                <div className="mb-10 grid grid-cols-2 sm:grid-cols-2 gap-5 gap-y-5">
+                    {/* Left Column */}
+                    <div className="space-y-3 sm:space-y-5">
+                        <div className="p-6 sm:p-20 bg-blue-200 rounded-lg text-center shadow-lg cursor-pointer gap-y-8">
+                            Faculty tracking 
+                        </div>
+                        
+                    </div>
+                    
+
+                    {/* Middle and Right Columns for Large Screens */}
+                    <div className="col-span-2 sm:col-span-1 bg-yellow-100 rounded-xl text-center shadow-lg cursor-pointer h-80 sm:h-full">
+                        <Notices/>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+// import { StrictMode } from "react";
+// import { createRoot } from "react-dom/client";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import {
@@ -8,7 +8,7 @@ import {
     createBrowserRouter,
     createRoutesFromElements,
 } from "react-router-dom";
-import App from "./App";
+// import App from "./App";
 import "./index.css";
 import Layout from "./Layout";
 import Home from "./pages/Home";
@@ -20,6 +20,7 @@ import About from "./pages/About";
 import Settings from "./pages/Settings";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
+import TeacherDash from "./pages/TeacherDash";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -34,6 +35,7 @@ const router = createBrowserRouter(
             <Route path="settings" element={<Settings />} />
             <Route path="login" element={<LoginPage />} />
             <Route path="signup" element={<SignupPage />} />
+            <Route path="teacher" element={<TeacherDash />} />
         </Route>
     )
 );

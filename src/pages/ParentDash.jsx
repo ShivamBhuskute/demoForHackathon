@@ -8,37 +8,47 @@ import PerformanceMetricsCard from "../components/parentDashboard/PerformanceMet
 import AcademicCalendarCard from "../components/parentDashboard/AcademicCalendarCard";
 import BehaviorInsightsCard from "../components/parentDashboard/BehaviorInsightsCard";
 import HealthWellnessCard from "../components/parentDashboard/HealthWellnessCard";
-// import CustomizationCard from "../components/parentDashboard";
 import NoticeCard from "../components/parentDashboard/NoticeCard";
 
 const ParentDash = () => {
     return (
-        <div className="h-screen flex">
+        <div className="min-h-screen flex">
             <Sidebar /> {/* Fixed Sidebar */}
             <div className="flex-grow flex flex-col">
                 <Header /> {/* Header at the top */}
                 <div className="flex-grow p-4 bg-gray-50">
                     <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-4">
-                        <div className="col-span-2">
+                        <div className="col-span-1 md:col-span-2">
                             <HomeworkCard />
                         </div>
 
-                        <EventCard />
-                        <AttendanceCard />
-                        <div className="col-span-1">
-                            <AcademicCalendarCard />
-
-                            <div className=" flex ">
-                                {/* <CustomizationCard /> */}
-                                {/* <NoticeCard /> */}
-                            </div>
+                        <div className="col-span-1 md:col-span-1">
+                            <EventCard />
                         </div>
-                        <div>
+
+                        <div className="col-span-1 md:col-span-1">
+                            <AttendanceCard />
+                        </div>
+
+                        <div className="col-span-1 md:col-span-1 lg:col-span-2">
+                            <AcademicCalendarCard />
+                        </div>
+
+                        <div className="col-span-1 md:col-span-2 lg:col-span-2">
                             <PerformanceMetricsCard />
+                        </div>
+
+                        <div className="col-span-1 md:col-span-2 lg:col-span-2">
                             <BehaviorInsightsCard />
                         </div>
-                        <HealthWellnessCard />
-                        <NoticeCard />
+
+                        <div className="col-span-1 md:col-span-2 lg:col-span-2">
+                            <HealthWellnessCard />
+                        </div>
+
+                        <div className="col-span-1 md:col-span-2 lg:col-span-2">
+                            <NoticeCard />
+                        </div>
                     </div>
                 </div>
             </div>
