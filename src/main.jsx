@@ -18,6 +18,8 @@ import StudentDash from "./pages/StudentDash";
 import Working from "./pages/Working";
 import About from "./pages/About";
 import Settings from "./pages/Settings";
+import LoginPage from "./pages/LoginPage";
+import SignupPage from "./pages/SignupPage";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -30,6 +32,8 @@ const router = createBrowserRouter(
             <Route path="working" element={<Working />} />
             <Route path="about" element={<About />} />
             <Route path="settings" element={<Settings />} />
+            <Route path="login" element={<LoginPage />} />
+            <Route path="signup" element={<SignupPage />} />
         </Route>
     )
 );

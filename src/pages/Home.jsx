@@ -135,7 +135,7 @@ const ModalLogin = ({ isOpen, onClose, navigate }) => {
                 </li>
                 <li>
                     <button
-                        onClick={() => handleNavigate("/teachers")}
+                        onClick={() => handleNavigate("/teacher")}
                         className="block w-full text-left p-2 hover:bg-gray-200 rounded"
                     >
                         Teachers
@@ -151,7 +151,7 @@ const ModalLogin = ({ isOpen, onClose, navigate }) => {
                 </li>
                 <li>
                     <button
-                        onClick={() => handleNavigate("/students")}
+                        onClick={() => handleNavigate("/student")}
                         className="block w-full text-left p-2 hover:bg-gray-200 rounded"
                     >
                         Students
@@ -187,7 +187,7 @@ const ModalSignup = ({ isOpen, onClose, navigate }) => {
                 </li>
                 <li>
                     <button
-                        onClick={() => handleNavigate("/teachers")}
+                        onClick={() => handleNavigate("/teacher")}
                         className="block w-full text-left p-2 hover:bg-gray-200 rounded"
                     >
                         Teachers
@@ -203,7 +203,7 @@ const ModalSignup = ({ isOpen, onClose, navigate }) => {
                 </li>
                 <li>
                     <button
-                        onClick={() => handleNavigate("/students")}
+                        onClick={() => handleNavigate("/student")}
                         className="block w-full text-left p-2 hover:bg-gray-200 rounded"
                     >
                         Students
