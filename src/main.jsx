@@ -15,6 +15,8 @@ import Home from "./pages/Home";
 import ParentDash from "./pages/ParentDash";
 import UniversityDash from "./pages/UniversityDash";
 import StudentDash from "./pages/StudentDash";
+import TeacherDash from "./pages/TeacherDash";
+
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" element={<Layout />}>
@@ -22,7 +24,7 @@ const router = createBrowserRouter(
             <Route path="student" element={<StudentDash />} />
             <Route path="parents" element={<ParentDash />} />
             <Route path="university" element={<UniversityDash />} />
-            {/* <Route path="teacher" element={<UniversityDash />} /> */}
+            <Route path="teacher" element={<TeacherDash />} />
         </Route>
     )
 );
