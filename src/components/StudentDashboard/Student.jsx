@@ -4,8 +4,10 @@ import CourseCard from "../CourseCard";
 import Chart from "../Chart";
 import ProfileCard from "../ProfileCard";
 import Experience from "../Experience";
-import { ConsultationCard, SetTargetCard } from "../Consult";
+// import { ConsultationCard, SetTargetCard } from "../Consult";
+import Todo from "../Consult"
 import Class from "../Class";
+import ChatWidget from "../ChatWidget";
 
 function Student() {
     const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -28,7 +30,7 @@ function Student() {
     }, []);
 
     return (
-        <div className="flex min-h-screen overflow-hidden flex-auto sm:flex-row bg-blue-50">
+        <div className="flex min-h-screen overflow-hidden flex-auto sm:flex-row bg-blue-100">
             {/* Sidebar */}
             <Sidebar />
 
@@ -36,7 +38,7 @@ function Student() {
             <div className="grid grid-cols-1 sm:grid-cols-12 p-6 w-full space-x-5 space-y-5 sm:space-y-10">
                 {/* Left Section (4/12) */}
                 <div className="col-span-4 flex flex-col">
-                    <header className=" sm:ml-10">
+                    <header className="sm:ml-10">
                         <h1 className="text-3xl font-bold">
                             Hello, Student 👋
                         </h1>
@@ -64,36 +66,57 @@ function Student() {
                     </section>
 
                     <div className="sm:ml-10 mt-10">
-                        <Class
+                        {/* <Class
                             className="Introduction to Biology"
                             studentsCount={45}
                             time="10:00 AM - 12:00 PM"
+                        /> */}
+                        <Class
+                            className="Schedule:-"
+                            studentsCount={30}
+                            time="10:00 AM - 11:00 AM"
+                            schedule={[
+                                "Class 1: Introduction",
+                                "Class 2: Algebra",
+                                "Class 3: Geometry",
+                                "Class 4: Calculus",
+                                "Class 6: Biology",
+                                "Class 7: Physics",
+                                "Class 8: Mathematics",
+                            ]}
                         />
                     </div>
                 </div>
 
                 {/* Right Section (8/12) */}
-                <div className="col-span-8 mt-6 flex flex-col bg-slate-200 rounded-lg">
+                <div className="col-span-8 mt-6 flex flex-col bg-slate-300 rounded-lg">
                     {/* Top Section with Profile and Cards */}
-                    <div className="flex flex-col sm:flex-row justify-between space-y-6 sm:space-y-0 sm:space-x-10 p-4">
+                    <div className="flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-4 p-4">
                         {/* Profile Card */}
-                        <div className="w-full sm:w-auto ">
+                        <div className="w-full sm:w-1/3 mt-5">
                             <ProfileCard
-                                name={"arka"}
+                                name={"Student"}
                                 courses={10}
                                 certifications={5}
                             />
                         </div>
+                        <div className="w-full sm:w-1/3 mt-5">
+                            <Experience exp={"2400XP"} />
+                        </div>
+                        <div className="w-full sm:w-1/3 mt-5">
+                            {/* <Experience exp={"2400XP"} /> */}
+                            <Todo />
+                        </div>
 
                         {/* Experience and Set Target Cards */}
-                        <div className="w-full sm:w-auto">
+                        {/* <div className="w-full sm:w-auto">
                             <div className="mt-4 sm:mt-0">
                                 <Experience exp={"2400XP"} />
                             </div>
                             <div className="flex flex-col space-y-5 mt-5">
                                 <SetTargetCard />
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
                     {/* Full-width Chart Section */}
@@ -105,6 +128,7 @@ function Student() {
                     )}
                 </div>
             </div>
+            <ChatWidget />
         </div>
     );
 }

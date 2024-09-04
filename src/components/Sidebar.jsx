@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { DiFirebase } from "react-icons/di";
 import {
     FiMenu,
     FiHome,
@@ -11,13 +12,19 @@ import {
     FiUserPlus,
     FiMessageCircle,
 } from "react-icons/fi"; // Icons from react-icons (optional)
+import { useNavigate } from "react-router-dom";
 
 function Sidebar() {
     const [isOpen, setIsOpen] = useState(false);
+    const navigate = useNavigate();
 
     const toggleSidebar = () => {
         setIsOpen(!isOpen);
     };
+
+    const navigateHome = () => {
+        navigate("/")
+    }
 
     return (
         <div className="flex overflow-y-visible">
@@ -44,21 +51,23 @@ function Sidebar() {
                                     alt="profile pic"
                                     className="rounded-full size-20"
                                 />
-                                <p className="mt-1">James</p>
+                                <p className="mt-1 ml-3">James</p>
                             </div>
                         </div>
                     )}
                     <div
-                        className={`flex items-center space-x-4 mt-10 ${
+                        className={`flex items-center space-x-4 mt-10 text-white hover:bg-white hover:text-black rounded-md ${
                             isOpen ? "" : "justify-center"
-                        }`}
+                        }`
+                    }
+                    onClick={navigateHome}
                     >
                         <FiHome size={24} />
                         {isOpen && <span>Home</span>}
                     </div>
 
                     <div
-                        className={`flex items-center space-x-4 mt-6 ${
+                        className={`flex items-center space-x-4 mt-6 text-white hover:bg-white hover:text-black rounded-md ${
                             isOpen ? "" : "justify-center"
                         }`}
                     >
@@ -67,7 +76,7 @@ function Sidebar() {
                     </div>
 
                     <div
-                        className={`flex items-center space-x-4 mt-6 ${
+                        className={`flex items-center space-x-4 mt-6 text-white hover:bg-white hover:text-black rounded-md ${
                             isOpen ? "" : "justify-center"
                         }`}
                     >
@@ -75,7 +84,7 @@ function Sidebar() {
                         {isOpen && <span>Exam</span>}
                     </div>
                     <div
-                        className={`flex items-center space-x-4 mt-6 ${
+                        className={`flex items-center space-x-4 mt-6 text-white hover:bg-white hover:text-black rounded-md ${
                             isOpen ? "" : "justify-center"
                         }`}
                     >
@@ -83,7 +92,7 @@ function Sidebar() {
                         {isOpen && <span>Classroom</span>}
                     </div>
                     <div
-                        className={`flex items-center space-x-4 mt-6 ${
+                        className={`flex items-center space-x-4 mt-6 text-white hover:bg-white hover:text-black rounded-md ${
                             isOpen ? "" : "justify-center"
                         }`}
                     >
@@ -91,7 +100,7 @@ function Sidebar() {
                         {isOpen && <span>Games</span>}
                     </div>
                     <div
-                        className={`flex items-center space-x-4 mt-6 ${
+                        className={`flex items-center space-x-4 mt-6 text-white hover:bg-white hover:text-black rounded-md ${
                             isOpen ? "" : "justify-center"
                         }`}
                     >
@@ -99,7 +108,7 @@ function Sidebar() {
                         {isOpen && <span>Groups</span>}
                     </div>
                     <div
-                        className={`flex items-center space-x-4 mt-6 ${
+                        className={`flex items-center space-x-4 mt-6 text-white hover:bg-white hover:text-black rounded-md ${
                             isOpen ? "" : "justify-center"
                         }`}
                     >
@@ -107,7 +116,7 @@ function Sidebar() {
                         {isOpen && <span>Consultants</span>}
                     </div>
                     <div
-                        className={`flex items-end space-x-4 mt-6 ${
+                        className={`flex items-end space-x-4 mt-6 text-white hover:bg-white hover:text-black rounded-md ${
                             isOpen ? "" : "justify-center"
                         }`}
                     >

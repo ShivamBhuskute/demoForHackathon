@@ -9,6 +9,7 @@ import AcademicCalendarCard from "../components/parentDashboard/AcademicCalendar
 import BehaviorInsightsCard from "../components/parentDashboard/BehaviorInsightsCard";
 import HealthWellnessCard from "../components/parentDashboard/HealthWellnessCard";
 import NoticeCard from "../components/parentDashboard/NoticeCard";
+import ChatWidget from "../components/ChatWidget";
 
 const ParentDash = () => {
     return (
@@ -52,6 +53,7 @@ const ParentDash = () => {
                     </div>
                 </div>
             </div>
+            <ChatWidget />
         </div>
     );
 };

@@ -7,8 +7,8 @@ function ProfileCard({ name, courses, certifications }) {
                 {/* Profile Image */}
                 <div className="w-24 h-24 bg-gray-200 rounded-full">
                     <img
-                        src="https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=338&ext=jpg&ga=GA1.1.2113030492.1720310400&semt=sph"
-                        alt="profile pic"
+                        src="https://t3.ftcdn.net/jpg/07/95/95/14/240_F_795951406_h17eywwIo36DU2L8jXtsUcEXqPeScBUq.jpg"
+                        alt="Profile"
                         className="rounded-full size-24"
                     />
                 </div>
