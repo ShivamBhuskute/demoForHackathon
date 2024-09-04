@@ -116,7 +116,7 @@ function Sidebar() {
                         {isOpen && <span>Consultants</span>}
                     </div>
                     <div
-                        className={`flex items-end space-x-4 mt-6 text-white hover:bg-white hover:text-black rounded-md ${
+                        className={`flex items-end space-x-4 mt-6 sm:mt-6 text-white hover:bg-white hover:text-black rounded-md ${
                             isOpen ? "" : "justify-center"
                         }`}
                     >

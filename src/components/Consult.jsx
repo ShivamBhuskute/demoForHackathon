@@ -33,7 +33,7 @@ import React from "react";
 
 function TodoCard() {
     return (
-            <div className="bg-blue-200 p-6 rounded-lg shadow-md w-full max-w-md h-[45vh] mt-5">
+            <div className="bg-blue-400 p-6 rounded-lg shadow-md w-full max-w-md h-[45vh] mt-5">
             <div className="flex flex-col items-center space-y-4">
                 {/* Todo Box */}
                 <div className="bg-white p-4 rounded-lg w-full h-full flex flex-col">

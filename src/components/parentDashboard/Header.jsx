@@ -24,11 +24,11 @@ const Header = () => {
           className="flex items-center cursor-pointer"
           onClick={toggleProfile}
         >
-          <img
-            src="https://via.placeholder.com/40"
-            alt="Profile"
-            className="rounded-full w-8 h-8 sm:w-10 sm:h-10"
-          />
+            {/* <img
+              src="https://via.placeholder.com/40"
+              alt="Profile"
+              className="rounded-full w-8 h-8 sm:w-10 sm:h-10"
+            /> */}
         </div>
 
         {profileExpanded && (

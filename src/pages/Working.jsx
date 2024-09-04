@@ -28,11 +28,6 @@ const AnimatedBox = () => {
             description:
                 "A dedicated portal for parents to monitor their child’s academic status, fostering stronger school-home connections.",
         },
-        {
-            title: "Flexible Classroom Integration",
-            description:
-                "Seamlessly integrates with Google Classroom to offer a flexible, dynamic learning environment that adapts to students' needs.",
-        },
     ];
 
     const [openBoxes, setOpenBoxes] = useState(
@@ -109,30 +104,32 @@ const AnimatedBox = () => {
                 <div
                     key={index}
                     className={`
-            h-64 w-5/12 sm:w-5/6 md:w-2/5 bg-white rounded-xl shadow-xl p-6
-            flex items-center justify-center relative
-            transition-all duration-500 my-8 mx-auto
-            ${
-                isOpen
-                    ? "translate-x-0 opacity-100"
-                    : index === 0
-                    ? "-translate-x-full opacity-0"
-                    : index % 2 === 0
-                    ? "-translate-x-full opacity-0"
-                    : "translate-x-full opacity-0"
-            }
-          `}
+                    h-64 w-80 sm:w-5/6 md:w-2/5 bg-white rounded-xl shadow-xl p-4 sm:p-6
+                    flex items-center justify-center relative
+                    transition-all duration-500 my-8 mx-auto
+                    ${
+                        isOpen
+                            ? "translate-x-0 opacity-100"
+                            : index === 0
+                            ? "-translate-x-full opacity-0"
+                            : index % 2 === 0
+                            ? "-translate-x-full opacity-0"
+                            : "translate-x-full opacity-0"
+                    }
+                `}
                 >
                     <div className="absolute top-0 left-0 h-10 w-10 bg-indigo-500 rounded-full flex items-center justify-center transform -translate-x-5 -translate-y-5">
-                        <span className="text-white text-xl">{index + 1}</span>
+                        <span className="text-white text-lg sm:text-xl">
+                            {index + 1}
+                        </span>
                     </div>
                     <div className="flex flex-col justify-center items-center">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-3">
+                        <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2 sm:mb-3 text-center">
                             {isOpen
-                                ? `${boxContent[index].title} `
+                                ? `${boxContent[index].title}`
                                 : boxContent[index].title}
                         </h2>
-                        <p className="text-gray-500 text-sm sm:text-base text-center">
+                        <p className="text-gray-700 text-sm sm:text-base text-center">
                             {isOpen
                                 ? boxContent[index].description
                                 : "Click to open the box."}

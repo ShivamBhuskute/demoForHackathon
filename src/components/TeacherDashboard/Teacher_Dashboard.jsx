@@ -49,13 +49,13 @@ const TeacherDashboard = () => {
         <div className="flex flex-col sm:flex-row justify-between items-center mb-4">
           <div className="flex flex-col w-full sm:w-2/3">
             <h1 className="text-3xl sm:text-5xl font-bold mb-2">Teacher's Dashboard</h1>
-            <div className="bg-white shadow-md p-2 flex rounded-md">
+            <div className="bg-white shadow-md p-2 flex rounded-full border border-black">
               <input
                 type="text"
                 className="flex-grow p-2 focus:outline-none"
                 placeholder="Search..."
               />
-              <button className="bg-blue-500 text-white p-2 rounded-md">🔍</button>
+              <button className="bg-blue-500 text-white p-2 rounded-md mr-4">🔍</button>
             </div>
           </div>
           <div className="flex items-center space-x-4 mt-4 sm:mt-0">

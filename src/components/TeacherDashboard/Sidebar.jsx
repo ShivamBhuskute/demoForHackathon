@@ -17,13 +17,13 @@ function Sidebar() {
     return (
         <div className="flex overflow-y-visible">
             <div
-                className={`bg-gray-800 text-white h-auto p-5 pt-8${
+                className={`bg-gray-800 text-white h-auto p-5 pt-8 ${
                     isOpen ? "lg:w-60" : "lg:w-20"
                 } duration-300 sm:duration-300 relative`}
             >
                 {/* Toggle Button */}
                 <div
-                    className="absolute top-10 text-white hover:bg-white hover:text-black rounded-full cursor-pointer"
+                    className="absolute top-10 p-1 text-white hover:bg-white hover:text-black rounded-full cursor-pointer"
                     onClick={toggleSidebar}
                 >
                     <FiMenu size={24} />
