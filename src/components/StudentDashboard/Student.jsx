@@ -77,11 +77,6 @@ function Student() {
                         </section>
 
                         <div className=" mt-10">
-                            {/* <Class
-                            className="Introduction to Biology"
-                            studentsCount={45}
-                            time="10:00 AM - 12:00 PM"
-                        /> */}
                             <Class
                                 className="Schedule:-"
                                 studentsCount={30}
