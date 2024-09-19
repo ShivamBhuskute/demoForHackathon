@@ -22,6 +22,7 @@ import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import TeacherDash from "./pages/TeacherDash";
 import StudentForm from "./pages/StudentForm";
+import TeacherForm from "./pages/TeacherForm";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -38,6 +39,7 @@ const router = createBrowserRouter(
             <Route path="signup" element={<SignupPage />} />
             <Route path="teacher" element={<TeacherDash />} />
             <Route path="stu_form" element={<StudentForm />} />
+            <Route path="teach_form" element={<TeacherForm />} />
         </Route>
     )
 );

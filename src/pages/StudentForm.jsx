@@ -3,7 +3,7 @@ import axios from "axios"; // Import Axios
 
 function StudentForm() {
     const [inputs, setInputs] = useState({
-        id: "",
+        uniqueId: "",
         bullying: "",
         financialIssues: "",
         mentalHealth: "",
@@ -71,15 +71,15 @@ function StudentForm() {
             >
                 <h2 className="text-2xl font-bold mb-4">Student Inputs</h2>
 
-                {/* Unique ID Input Field */}
+                {/* Unique uniqueId Input Field */}
                 <div className="mb-4">
                     <label className="block mb-2 font-semibold">
-                        Student ID
+                        Student uniqueId
                     </label>
                     <input
                         type="text"
-                        name="id"
-                        value={inputs.id}
+                        name="uniqueId"
+                        value={inputs.uniqueId}
                         onChange={handleChange}
                         className="border border-gray-300 rounded p-2 w-full"
                         required // Make this field required
