@@ -192,6 +192,8 @@ import CardSlider from "../components/HomePage/CardSlider.jsx";
 import Footer from "../components/HomePage/Footer.jsx";
 import InfoSlider from "../components/HomePage/InfoSlider.jsx";
 import Advantages from "../components/HomePage/Advantages.jsx";
+import ChatWidget from "../components/ChatWidget"
+
 
 
 function HomePage() {
@@ -202,7 +204,9 @@ function HomePage() {
       <CardSlider />
       <Advantages />
       <InfoSlider />
+      <ChatWidget />
       <Footer />
+
     </div>
   );
 }

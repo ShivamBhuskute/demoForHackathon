@@ -21,21 +21,33 @@ import Settings from "./pages/Settings";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import TeacherDash from "./pages/TeacherDash";
+import Home_Student from './pages/Home_Student';
+import Home_Parents from './pages/Home_Parents';
+import Home_Teacher from './pages/Home_Teacher';
+import Home_University from './pages/Home_University';
+// import Signup from "./components/Signup";
+
+
 
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" element={<Layout />}>
-            <Route path="" element={<Home />} />
-            <Route path="student" element={<StudentDash />} />
-            <Route path="parents" element={<ParentDash />} />
-            <Route path="university" element={<UniversityDash />} />
-            {/* <Route path="teacher" element={<UniversityDash />} /> */}
+            {/* <Route path="/Home" element={<Home />} /> */}
+            <Route index element={<Home />} />  
+            <Route path="StudentDash" element={<StudentDash />} />
+            <Route path="ParentDash" element={<ParentDash />} />
+            <Route path="UniversityDash" element={<UniversityDash />} />
             <Route path="working" element={<Working />} />
             <Route path="about" element={<About />} />
             <Route path="settings" element={<Settings />} />
             <Route path="login" element={<LoginPage />} />
             <Route path="signup" element={<SignupPage />} />
-            <Route path="teacher" element={<TeacherDash />} />
+            <Route path="TeacherDash" element={<TeacherDash />} />
+            {/* <Route path="/" element={<HomePage />} /> */}
+            <Route path="/Home_Student" element={<Home_Student />} />
+            <Route path="/Home_Parents" element={<Home_Parents />} />
+            <Route path="/Home_Teacher" element={<Home_Teacher />} />
+            <Route path="/Home_University" element={<Home_University />} />
         </Route>
     )
 );

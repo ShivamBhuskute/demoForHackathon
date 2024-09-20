@@ -9,11 +9,11 @@ export default {
                 poppins: ["Poppins", "sans-serif"],
             },
             animation: {
-                fadeIn: 'fadeIn 2s ease-in-out',
-                slideInLeft: 'slideInLeft 1.5s ease-out',
-                slideInRight: 'slideInRight 1.5s ease-out',
-                fadeInLeft: 'fadeInLeft 1.5s ease-out',
-                fadeInRight: 'fadeInRight 1.5s ease-out',
+                fadeIn: 'fadeIn 1.5s ease-in-out',
+                slideInLeft: 'slideInLeft 1s ease-out',
+                slideInRight: 'slideInRight 1s ease-out',
+                fadeInLeft: 'fadeInLeft 1s ease-out',
+                fadeInRight: 'fadeInRight 1s ease-out',
             },
             keyframes: {
                 fadeIn: {
