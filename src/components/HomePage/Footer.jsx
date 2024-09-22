@@ -177,12 +177,12 @@ const Footer = () => {
 
             </div>
 
-            {/* top going */}
+            {/* top going
             <div className="fixed bottom-8 right-4">
                 <a href="#top" className="bg-orange-500 text-white p-5 rounded-full shadow-lg">
                     <i className="fas fa-arrow-up"></i>
                 </a>
-            </div>
+            </div> */}
         </footer>
     );
 };
