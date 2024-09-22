@@ -2,7 +2,7 @@ import React from 'react';
 
 const Banner = () => {
   return (
-    <section className="bg-gradient-to-r from-indigo-600 to-blue-500 text-white py-20 animate-fadeIn">
+    <section className="bg-gradient-to-r from-indigo-600 to-blue-500 text-white py-20 animate-fadeIn shadow-xl">
       <div className="container mx-auto text-center">
         <h1 className="text-8xl font-bold tracking-tight animate-slideInLeft">
           WiseTrack
