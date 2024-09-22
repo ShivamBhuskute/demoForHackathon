@@ -86,7 +86,120 @@ function StudentForm() {
                     />
                 </div>
 
-                {/* New Questions */}
+                {/* Question 1 */}
+                <div className="mb-4">
+                    <label className="block mb-2 font-semibold">
+                        Have you experienced bullying or ragging at school?
+                    </label>
+                    <select
+                        name="bullying"
+                        value={inputs.bullying}
+                        onChange={handleChange}
+                        className="border border-gray-300 rounded p-2 w-full"
+                        required
+                    >
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                {/* Question 2 */}
+                <div className="mb-4">
+                    <label className="block mb-2 font-semibold">
+                        Are you currently facing any financial difficulties that
+                        affect your studies?
+                    </label>
+                    <select
+                        name="financialIssues"
+                        value={inputs.financialIssues}
+                        onChange={handleChange}
+                        className="border border-gray-300 rounded p-2 w-full"
+                        required
+                    >
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                {/* Question 3 */}
+                <div className="mb-4">
+                    <label className="block mb-2 font-semibold">
+                        Are you currently experiencing any mental health issues
+                        (such as stress, anxiety, or depression)?
+                    </label>
+                    <select
+                        name="mentalHealth"
+                        value={inputs.mentalHealth}
+                        onChange={handleChange}
+                        className="border border-gray-300 rounded p-2 w-full"
+                        required
+                    >
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                {/* Question 4 */}
+                <div className="mb-4">
+                    <label className="block mb-2 font-semibold">
+                        Do you have any physical health problems affecting your
+                        well-being or school performance?
+                    </label>
+                    <select
+                        name="physicalHealth"
+                        value={inputs.physicalHealth}
+                        onChange={handleChange}
+                        className="border border-gray-300 rounded p-2 w-full"
+                        required
+                    >
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                {/* Question 5 */}
+                <div className="mb-4">
+                    <label className="block mb-2 font-semibold">
+                        Have you experienced any discrimination based on your
+                        gender at school?
+                    </label>
+                    <select
+                        name="genderDiscrimination"
+                        value={inputs.genderDiscrimination}
+                        onChange={handleChange}
+                        className="border border-gray-300 rounded p-2 w-full"
+                        required
+                    >
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                {/* Question 6 */}
+                <div className="mb-4">
+                    <label className="block mb-2 font-semibold">
+                        Do you have any physical disabilities that impact your
+                        ability to participate in school activities?
+                    </label>
+                    <select
+                        name="physicalDisability"
+                        value={inputs.physicalDisability}
+                        onChange={handleChange}
+                        className="border border-gray-300 rounded p-2 w-full"
+                        required
+                    >
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                {/* Question 7 */}
                 <div className="mb-4">
                     <label className="block mb-2 font-semibold">
                         Are you currently working and studying?
@@ -104,6 +217,7 @@ function StudentForm() {
                     </select>
                 </div>
 
+                {/* Question 8 */}
                 <div className="mb-4">
                     <label className="block mb-2 font-semibold">
                         Are you interested in your studies?
@@ -121,6 +235,7 @@ function StudentForm() {
                     </select>
                 </div>
 
+                {/* Question 9 */}
                 <div className="mb-4">
                     <label className="block mb-2 font-semibold">
                         Is your school far off from your residence?
@@ -138,28 +253,6 @@ function StudentForm() {
                     </select>
                 </div>
 
-                {/* Other Questions */}
-                {Object.keys(inputs)
-                    .filter((key) => key !== "id")
-                    .map((key) => (
-                        <div key={key} className="mb-4">
-                            <label className="block mb-2 font-semibold">
-                                {getQuestionText(key)}
-                            </label>
-                            <select
-                                name={key}
-                                value={inputs[key]}
-                                onChange={handleChange}
-                                className="border border-gray-300 rounded p-2 w-full"
-                                required // Make these fields required
-                            >
-                                <option value="">Select</option>
-                                <option value="yes">Yes</option>
-                                <option value="no">No</option>
-                            </select>
-                        </div>
-                    ))}
-
                 <button
                     type="submit"
                     className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
@@ -170,26 +263,5 @@ function StudentForm() {
         </div>
     );
 }
-
-// Helper function to get question text based on input key
-const getQuestionText = (key) => {
-    const questions = {
-        bullying: "Have you experienced bullying or ragging at school?",
-        financialIssues:
-            "Are you currently facing any financial difficulties that affect your studies?",
-        mentalHealth:
-            "Are you currently experiencing any mental health issues (such as stress, anxiety, or depression)?",
-        physicalHealth:
-            "Do you have any physical health problems affecting your well-being or school performance?",
-        genderDiscrimination:
-            "Have you experienced any discrimination based on your gender at school?",
-        physicalDisability:
-            "Do you have any physical disabilities that impact your ability to participate in school activities?",
-        workingAndStudying: "Are you currently working and studying?",
-        interestedInStudies: "Are you interested in your studies?",
-        schoolFarOff: "Is your school far off from your residence?",
-    };
-    return questions[key];
-};
 
 export default StudentForm;
