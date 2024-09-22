@@ -56,9 +56,6 @@ function StudentContent1() {
           />
         ))}
       </div>
-      <div className="mt-12">
-        <img src="/path/to/your/illustration.png" alt="Illustration" className="w-full md:w-1/3 mx-auto animate-bounce" />
-      </div>
     </div>
   );
 }

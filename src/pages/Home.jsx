@@ -185,6 +185,33 @@
 
 
 
+// import React from "react";
+// import Header from "../components/HomePage/Header.jsx";
+// import Banner from "../components/HomePage/Banner.jsx";
+// import CardSlider from "../components/HomePage/cardSlider/CardSlider.jsx";
+// import Footer from "../components/HomePage/Footer.jsx";
+// import InfoSlider from "../components/HomePage/InfoSlider.jsx";
+// import Advantages from "../components/HomePage/Advantages.jsx";
+// import ChatWidget from "../components/ChatWidget"
+
+
+
+// function HomePage() {
+//   return (
+//     <div className="bg-gradient-to-r from-blue-600 to-blue-200">
+//       <Header />
+//       <Banner />
+//       <CardSlider />
+//       <Advantages />
+//       <InfoSlider />
+//       <ChatWidget />
+//       <Footer />
+
+//     </div>
+//   );
+// }
+
+// export default HomePage;
 import React from "react";
 import Header from "../components/HomePage/Header.jsx";
 import Banner from "../components/HomePage/Banner.jsx";
@@ -194,19 +221,23 @@ import InfoSlider from "../components/HomePage/InfoSlider.jsx";
 import Advantages from "../components/HomePage/Advantages.jsx";
 import ChatWidget from "../components/ChatWidget"
 
-
-
 function HomePage() {
   return (
-    <div className="bg-white">
-      <Header />
-      <Banner />
-      <CardSlider />
-      <Advantages />
-      <InfoSlider />
-      <ChatWidget />
-      <Footer />
-
+    <div className="bg-gradient-to-r from-blue-600 to-blue-200">
+      {/* Header with fixed position */}
+      <div className="fixed w-full z-50">
+        <Header />
+      </div>
+      
+      {/* Main content with padding to avoid being hidden by the fixed header */}
+      <div className="pt-24">
+        <Banner />
+        <CardSlider />
+        <Advantages />
+        <InfoSlider />
+        <ChatWidget />
+        <Footer />
+      </div>
     </div>
   );
 }
