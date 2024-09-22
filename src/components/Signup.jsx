@@ -74,7 +74,7 @@ function Signup() {
                 navigate("/parent");
                 break;
             case "student":
-                navigate("/student");
+                navigate("/StudentDash");
                 break;
             case "teacher":
                 navigate("/teacher");

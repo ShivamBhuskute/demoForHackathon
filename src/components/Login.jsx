@@ -6,7 +6,7 @@ function Login() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        navigate("/student");
+        navigate("/StudentDash");
     };
 
     return (
@@ -18,7 +18,7 @@ function Login() {
                 <p className="mt-2 text-center text-base text-black/60">
                     Don't have an account?&nbsp;
                     <Link
-                        to="/signup"
+                        to="/Signup"
                         className="font-medium text-blue-600 transition-all duration-200 hover:underline"
                     >
                         Sign Up
