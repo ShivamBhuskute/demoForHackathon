@@ -54,7 +54,7 @@ const AttendanceCard = () => {
   };
 
   return (
-    <div className="bg-slate-200 p-4 rounded shadow w-full h-full md:col-span-1 ">
+    <div className="bg-slate-200 p-4 rounded shadow-lg w-full h-full md:col-span-1 ">
       <h2 className="text-xl font-bold mb-4">Attendance</h2>
       <div className="h-56">
         <Doughnut data={data} options={options} />
