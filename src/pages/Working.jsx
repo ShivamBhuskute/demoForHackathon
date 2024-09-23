@@ -1,6 +1,6 @@
 
-
-
+import Banner from "../components/HomePage/Banner";
+import Header from "../components/HomePage/Header";
 import React, { useEffect, useState } from "react";
 import { FaExclamationTriangle, FaUsers, FaSchool, FaMoneyBillWave, FaHeadset, FaChalkboardTeacher, FaHeart, FaLightbulb, FaLaptop, FaClipboardList } from "react-icons/fa";
 
@@ -67,7 +67,7 @@ const AnimatedBox = () => {
             icon: <FaClipboardList className="text-4xl text-indigo-500" />,
         },
     ];
-    
+
 
     const [openBoxes, setOpenBoxes] = useState(Array(boxContent.length).fill(false));
     const [lastScrollY, setLastScrollY] = useState(0);
@@ -119,6 +119,15 @@ const AnimatedBox = () => {
 
     return (
         <>
+            <div className="fixed w-full z-50">
+                <Header />
+            </div>
+
+            {/* Main content with padding to avoid being hidden by the fixed header */}
+            <div className="pt-24">
+                <Banner />
+
+            </div>
             {openBoxes.map((isOpen, index) => (
                 <div
                     key={index}
@@ -149,7 +158,7 @@ const AnimatedBox = () => {
 
 function Working() {
     return (
-        <div className="overflow-auto bg-gray-900">
+        <div className="overflow-auto bg-gradient-to-r from-blue-950 to-blue-400">
             <AnimatedBox />
         </div>
     );
