@@ -231,6 +231,7 @@ function Student() {
             </p>
           </div>
 
+<<<<<<< HEAD
           {/* Search Bar and Notification Bell Section */}
           <div className="flex items-center justify-between w-full mt-4">
             <div className="flex items-center w-full bg-white shadow-lg p-1 rounded-lg border border-gray-300 hover:shadow-xl transition-all duration-300">
@@ -242,6 +243,101 @@ function Student() {
               <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-all duration-300 ml-2">
                 Search
               </button>
+=======
+                        <div className=" mt-10">
+                            <Class
+                                className="Schedule:-"
+                                studentsCount={30}
+                                time="10:00 AM - 11:00 AM"
+                                schedule={[
+                                    "Class 1: Introduction",
+                                    "Class 2: Algebra",
+                                    "Class 3: Geometry",
+                                    "Class 4: Calculus",
+                                    "Class 6: Biology",
+                                    "Class 7: Physics",
+                                    "Class 8: Mathematics",
+                                ]}
+                            />
+                        </div>
+                        <div className="bg-yellow-200 rounded-lg shadow-lg p-6 sm:w-96 mt-10 text-center cursor-pointer transform hover:scale-105 transition-all duration-300">
+                            <h2 className="text-lg font-bold">
+                                Learning Paths
+                            </h2>
+                        </div>
+                        <div className="bg-red-200 rounded-lg shadow-lg p-6 sm:w-96 mt-10 text-center cursor-pointer transform hover:scale-105 transition-all duration-300">
+                            <h2 className="text-lg font-bold">
+                                Announcment Box
+                            </h2> 
+                        </div>
+                    </div>
+
+                    {/* Right Section (8/12) */}
+                    <div className="col-span-8 flex flex-col bg-blue-200 rounded-lg">
+                        {/* Top Section with Profile and Cards */}
+                        <div className="flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-4 p-4">
+                            {/* Profile Card */}
+                            <div className="w-full sm:w-1/3 mt-5 hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                                <ProfileCard
+                                    name={"Student"}
+                                    courses={10}
+                                    certifications={5}
+                                />
+                            </div>
+                            <div className="w-full sm:w-1/3 mt-5 hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                                <Experience exp={"2400XP"} />
+                            </div>
+                            <div className="w-full sm:w-1/3 mt-5 hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                                <Todo />
+                            </div>
+                        </div>
+                        <div className="space-y-4 p-4">
+                            <div className="bg-yellow-100 rounded-lg shadow-lg p-6 w-full text-center cursor-pointer transform hover:scale-105 transition-all duration-300">
+                                <h2 className="text-lg font-bold">
+                                    Calm Corner
+                                </h2>
+                            </div>
+                            <div className="bg-green-100 rounded-lg shadow-lg p-6 w-full text-center cursor-pointer transform hover:scale-105 transition-all duration-300">
+                                <h2 className="text-lg font-bold">
+                                    Concentration Challenge
+                                </h2>
+                            </div>
+                        </div>
+
+                        {/* Full-width Chart Section */}
+                        {/* Conditionally render the Chart component based on screen size */}
+                        <div className="p-4">
+                            {!isSmallScreen && (
+                                <div className="sm:mt-4 sm:shadow-lg rounded-lg bg-white p-4 w-full">
+                                    <h1 className="ml-10 font-bold text-2xl">
+                                        Chart:-{" "}
+                                    </h1>
+                                    <Chart />
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                    {/* New Box Section */}
+                    {/* <div className="w-full mt-10">
+                    <div className="flex flex-col sm:flex-row justify-center space-y-6 sm:space-y-0 sm:space-x-6">
+                        <div className="bg-blue-200 rounded-lg shadow-lg p-6 w-full sm:w-1/3 text-center cursor-pointer transform hover:scale-105 transition-all duration-300">
+                            <h2 className="text-lg font-bold">
+                                Concentration Challenge
+                            </h2>
+                        </div>
+                        <div className="bg-yellow-100 rounded-lg shadow-lg p-6 w-full sm:w-1/3 text-center cursor-pointer transform hover:scale-105 transition-all duration-300">
+                            <h2 className="text-lg font-bold">Calm Corner</h2>
+                        </div>
+                        <div className="bg-blue-500 rounded-lg shadow-lg p-6 w-full sm:w-1/3 text-center cursor-pointer text-white transform hover:scale-105 transition-all duration-300">
+                            <h2 className="text-lg font-bold">
+                                Announcement Box
+                            </h2>
+                        </div>
+                    </div>
+                </div> */}
+                </div>
+                <ChatWidget />
+>>>>>>> 6f09d6b57b9dab370b290c951159baa17d9b97b0
             </div>
 
             {/* Notification Bell */}

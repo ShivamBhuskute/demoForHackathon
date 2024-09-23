@@ -21,6 +21,8 @@ import Settings from "./pages/Settings";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import TeacherDash from "./pages/TeacherDash";
+import StudentForm from "./pages/StudentForm";
+import TeacherForm from "./pages/TeacherForm";
 import Home_Student from './pages/Home_Student';
 import Home_Parents from './pages/Home_Parents';
 import Home_Teacher from './pages/Home_Teacher';
@@ -43,6 +45,8 @@ const router = createBrowserRouter(
             <Route path="login" element={<LoginPage />} />
             <Route path="signup" element={<SignupPage />} />
             <Route path="TeacherDash" element={<TeacherDash />} />
+            <Route path="stu_form" element={<StudentForm />} />
+            <Route path="teach_form" element={<TeacherForm />} />
             {/* <Route path="/" element={<HomePage />} /> */}
             <Route path="/Home_Student" element={<Home_Student />} />
             <Route path="/Home_Parents" element={<Home_Parents />} />

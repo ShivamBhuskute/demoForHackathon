@@ -6,7 +6,7 @@ function Login() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        navigate("/student");
+        navigate("/StudentDash");
     };
 
     return (
