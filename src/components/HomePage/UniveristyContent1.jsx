@@ -7,7 +7,7 @@ function UniveristyContent1() {
     const contentData = [
         {
             id: 1,
-            title: "School Management",
+            title: "University Management",
             description: "Streamlining school management: State-of-the-art platform for efficient operations, centralized data, real-time insights, fostering a harmonious school environment.",
             icon: "🏫", // You can use a real icon instead of emojis (FontAwesome or similar)
             bgColor: "bg-orange-100",
