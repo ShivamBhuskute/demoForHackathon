@@ -10,6 +10,7 @@ import BehaviorInsightsCard from "../components/parentDashboard/BehaviorInsights
 import HealthWellnessCard from "../components/parentDashboard/HealthWellnessCard";
 import NoticeCard from "../components/parentDashboard/NoticeCard";
 import ChatWidget from "../components/ChatWidget";
+import StudentInsights from "../components/parentDashboard/StudentInsights";
 
 const ParentDash = () => {
     return (
@@ -49,6 +50,9 @@ const ParentDash = () => {
 
                         <div className="col-span-1 md:col-span-2 lg:col-span-2">
                             <NoticeCard />
+                        </div>
+                        <div className="col-span-1 md:col-span-2 lg:col-span-2">
+                            <StudentInsights />
                         </div>
                     </div>
                 </div>

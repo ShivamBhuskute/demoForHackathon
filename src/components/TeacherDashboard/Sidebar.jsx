@@ -33,12 +33,8 @@ function Sidebar() {
                 <div className="mt-24">
                     {isOpen && (
                         <div className="flex justify-center align-top space-x-4">
-                            <div className=" p-4 bg-slate-700 rounded-lg shadow-lg">
-                                <img
-                                    src={Faculty}
-                                    alt="profile pic"
-                                    className="rounded-full h-36"
-                                />
+                            <div className=" p-4 bg-slate-700 rounded-lg shadow-lg flex flex-col items-center">
+                            <i className="fas fa-user-tie text-6xl text-blue-700 mb-4"></i> {/* Alternate Teacher Icon */}
                                 <p className="mt-1 p-2 ">Genelia D'Souza </p>
                             </div>
                         </div>

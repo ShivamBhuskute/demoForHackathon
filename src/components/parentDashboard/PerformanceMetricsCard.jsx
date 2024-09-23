@@ -1,16 +1,9 @@
-// import React from 'react';
+// 
 
-// const ExamCard = () => {
-//     return (
-//         <div className="bg-yellow-200 p-4 rounded shadow w-full h-full md:col-span-1">
-//             <h2 className="text-xl font-bold">Exam</h2>
-//         </div>
-//     );
-// };
 
-// export default ExamCard;
+
 import React from 'react';
-import { FaBook, FaCheckCircle, FaClock } from 'react-icons/fa';
+import { FaBook, FaCheckCircle, FaClock, FaFlask, FaGlobe, FaHistory, FaLanguage, FaMapMarkedAlt } from 'react-icons/fa';
 
 const exams = [
   {
@@ -18,30 +11,49 @@ const exams = [
     date: '20th September 2024',
     description: 'Algebra and Geometry',
     status: 'Completed',
+    icon: <FaBook />,
   },
   {
     subject: 'Science',
     date: '22nd September 2024',
     description: 'Physics - Mechanics',
     status: 'Upcoming',
+    icon: <FaFlask />,
   },
   {
     subject: 'History',
     date: '25th September 2024',
     description: 'World War II',
     status: 'Completed',
+    icon: <FaHistory />,
   },
   {
     subject: 'English',
     date: '28th September 2024',
     description: 'Literature and Comprehension',
     status: 'Upcoming',
+    icon: <FaLanguage />,
   },
   {
     subject: 'Geography',
     date: '30th September 2024',
     description: 'Climatic Regions',
     status: 'Upcoming',
+    icon: <FaMapMarkedAlt />,
+  },
+  {
+    subject: 'Chemistry',
+    date: '2nd October 2024',
+    description: 'Organic Chemistry',
+    status: 'Upcoming',
+    icon: <FaFlask />,
+  },
+  {
+    subject: 'Biology',
+    date: '4th October 2024',
+    description: 'Human Anatomy',
+    status: 'Upcoming',
+    icon: <FaGlobe />,
   },
 ];
 
@@ -71,6 +83,7 @@ const ExamCard = () => {
             key={index}
             className="bg-white p-4 rounded-lg shadow-md flex items-start space-x-4"
           >
+            {/* Status Icon */}
             <div className="text-2xl">
               {exam.status === 'Completed' ? (
                 <FaCheckCircle className="text-green-500" />
@@ -78,8 +91,12 @@ const ExamCard = () => {
                 <FaClock className="text-yellow-500" />
               )}
             </div>
+            {/* Subject and Details */}
             <div>
-              <h3 className="text-lg font-semibold text-gray-800">{exam.subject}</h3>
+              <div className="flex items-center space-x-2">
+                <span className="text-2xl">{exam.icon}</span>
+                <h3 className="text-lg font-semibold text-gray-800">{exam.subject}</h3>
+              </div>
               <p className="text-sm text-gray-600">{exam.description}</p>
               <p className="text-sm text-gray-500 mt-1">Date: {exam.date}</p>
             </div>
