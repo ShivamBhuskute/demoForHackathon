@@ -826,10 +826,10 @@ const Header = () => {
 
   return (
     <>
-      <header className="bg-blue-950 py-5 sm:py-7 h-auto sm:h-24">
-        <div className="flex flex-col sm:flex-row justify-between items-center px-4">
+      <header className="bg-blue-950 py-7 h-24">
+        <div className="flex justify-between items-center px-4">
           {/* Logo Section */}
-          <NavLink to="/" className="text-white font-bold text-4xl sm:text-5xl" style={{ fontFamily: "'SUSE', sans-serif" }}>
+          <NavLink to="/" className="text-white font-bold text-5xl" style={{ fontFamily: "'SUSE', sans-serif" }}>
             WISETRACK
           </NavLink>
 

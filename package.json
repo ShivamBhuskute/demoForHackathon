@@ -13,7 +13,11 @@
     "@fortawesome/fontawesome-free": "^6.6.0",
     "@react-icons/all-files": "^4.1.0",
     "aos": "^2.3.4",
+<<<<<<< HEAD
     "chart.js": "^4.4.4",
+=======
+    "axios": "^1.7.7",
+>>>>>>> 6f09d6b57b9dab370b290c951159baa17d9b97b0
     "dayjs": "^1.11.13",
     "framer-motion": "^11.5.4",
     "i18next": "^23.15.1",

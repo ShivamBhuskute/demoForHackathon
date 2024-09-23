@@ -100,7 +100,7 @@ function Student() {
                         <div className="bg-red-200 rounded-lg shadow-lg p-6 sm:w-96 mt-10 text-center cursor-pointer transform hover:scale-105 transition-all duration-300">
                             <h2 className="text-lg font-bold">
                                 Announcment Box
-                            </h2>
+                            </h2> 
                         </div>
                     </div>
 
