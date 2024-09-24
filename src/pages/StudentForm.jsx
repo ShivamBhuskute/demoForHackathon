@@ -52,7 +52,7 @@ function StudentForm() {
 
         try {
             const response = await axios.post(
-                "http://localhost:3000/api/aI/feedback/student/",
+                "backend-for-hackathon.vercel.app/api/aI/feedback/student/",
                 convertedInputs
             ); // Replace with your backend URL
             console.log(response.data); // Handle response data

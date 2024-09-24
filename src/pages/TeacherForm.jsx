@@ -47,7 +47,10 @@ function TeacherForm() {
         event.preventDefault();
 
         try {
-            const response = await axios.post("http://localhost:3000/api/aI/feedback/teacher", inputs);
+            const response = await axios.post(
+                "backend-for-hackathon.vercel.app/api/aI/feedback/teacher",
+                inputs
+            );
             console.log("Response:", response.data); // Handle success response
             setInputs({
                 uniqueId: "",
@@ -100,7 +103,8 @@ function TeacherForm() {
 
                 <div className="mb-4">
                     <label className="block text-sm font-medium text-gray-700">
-                        What percentage of marks has the student achieved in their assessments?
+                        What percentage of marks has the student achieved in
+                        their assessments?
                         <input
                             type="text"
                             name="grades"
@@ -121,15 +125,18 @@ function TeacherForm() {
                             className="mt-1 block w-full border border-gray-300 rounded-md p-2"
                         >
                             <option value="">Select</option>
-                            <option value="1">Yes</option> {/* Changed to use 1 */}
-                            <option value="0">No</option> {/* Changed to use 0 */}
+                            <option value="1">Yes</option>{" "}
+                            {/* Changed to use 1 */}
+                            <option value="0">No</option>{" "}
+                            {/* Changed to use 0 */}
                         </select>
                     </label>
                 </div>
 
                 <div className="mb-4">
                     <label className="block text-sm font-medium text-gray-700">
-                        How would you rate the student's classroom behaviour and participation? (1-5)
+                        How would you rate the student's classroom behaviour and
+                        participation? (1-5)
                         <input
                             type="number"
                             name="behaviour"
@@ -144,7 +151,8 @@ function TeacherForm() {
 
                 <div className="mb-4">
                     <label className="block text-sm font-medium text-gray-700">
-                        What is the student's average percentage score in weekly tests?
+                        What is the student's average percentage score in weekly
+                        tests?
                         <input
                             type="text"
                             name="test"
@@ -157,7 +165,8 @@ function TeacherForm() {
 
                 <div className="mb-4">
                     <label className="block text-sm font-medium text-gray-700">
-                        What is the student's percentage score in attention-based assessments?
+                        What is the student's percentage score in
+                        attention-based assessments?
                         <input
                             type="text"
                             name="attention"
