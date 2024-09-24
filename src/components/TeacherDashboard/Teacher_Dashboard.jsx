@@ -56,7 +56,7 @@ const TeacherDashboard = () => {
     setNotices(notices.filter((_, i) => i !== index));
   };
 
-  axios.defaults.withCredentials = true;
+  // axios.defaults.withCredentials = true;
 
   const handleSubmitUniqueId = async (event) => {
     event.preventDefault();
