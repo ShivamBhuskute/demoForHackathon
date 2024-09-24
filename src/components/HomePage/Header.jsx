@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { FaUserGraduate, FaChalkboardTeacher, FaUniversity, FaUserFriends } from 'react-icons/fa'; // Import relevant icons
+import { FaUserGraduate, FaHandsHelping, FaChalkboardTeacher, FaUniversity, FaUserFriends } from 'react-icons/fa'; // Import relevant icons
 
 
 const Header = () => {
@@ -81,8 +81,8 @@ const Header = () => {
               <option className="bg-blue-50 text-black" value="HI">Hindi</option>
             </select>
           </div>
- {/* Login/Signup Section */}
- <div className="flex space-x-2">
+          {/* Login/Signup Section */}
+          <div className="flex space-x-2">
             <button
               onClick={toggleModal}
               className="text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-blue-500 text-sm sm:text-base"
@@ -185,7 +185,23 @@ const Header = () => {
                     </div>
                   </NavLink>
                 </li>
+
+                {/* NGO Section */}
+                <li className="flex items-center space-x-4 bg-purple-100 p-4 rounded-lg">
+                  <NavLink to="/NGODash" onClick={toggleModal} className="flex items-center space-x-4">
+                    <div className="bg-purple-500 p-3 rounded-full">
+                      <FaHandsHelping className="text-white text-2xl" /> {/* NGO Icon */}
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-lg">NGO</h3>
+                      <p className="text-gray-500 text-sm">
+                        Collaborate with schools and communities to support at-risk students and improve outcomes.
+                      </p>
+                    </div>
+                  </NavLink>
+                </li>
               </ul>
+
             </div>
           </div>
         </>
