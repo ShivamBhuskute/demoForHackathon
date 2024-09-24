@@ -48,7 +48,7 @@ function TeacherForm() {
 
         try {
             const response = await axios.post(
-                "backend-for-hackathon.vercel.app/api/aI/feedback/teacher",
+                "https://backend-for-hackathon.vercel.app/api/aI/feedback/teacher",
                 inputs
             );
             console.log("Response:", response.data); // Handle success response
