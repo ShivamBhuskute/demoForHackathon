@@ -73,7 +73,6 @@ const TeacherDashboard = () => {
 
   return (
     <div className="flex">
-      <Sidebar />
       {/* Main Content */}
       <div className="flex-1 ml-0 sm:ml-1/4 lg:mr-[20%] sm:mr-1/5 p-4 overflow-auto">
         {/* Header */}
