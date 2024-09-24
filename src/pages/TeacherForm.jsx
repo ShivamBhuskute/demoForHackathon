@@ -43,6 +43,8 @@ function TeacherForm() {
         }
     };
 
+    axios.defaults.withCredentials = true;
+
     const handleSubmit = async (event) => {
         event.preventDefault();
 

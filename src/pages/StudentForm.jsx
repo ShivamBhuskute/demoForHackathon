@@ -27,6 +27,8 @@ function StudentForm() {
         return value === "yes" ? 1 : value === "no" ? 0 : null;
     };
 
+    axios.defaults.withCredentials = true;
+
     const handleSubmit = async (event) => {
         event.preventDefault();
 
