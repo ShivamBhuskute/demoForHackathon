@@ -105,6 +105,35 @@ const TeacherDashboard = () => {
           </div>
         </div>
 
+
+        <form onSubmit={handleSubmitUniqueId} className="mb-4">
+          <label className="block text-sm font-medium text-gray-700">
+            Enter Student Unique ID:
+            <input
+              type="text"
+              value={uniqueId}
+              onChange={(e) => setUniqueId(e.target.value)}
+              className="mt-1 block w-full border border-gray-300 rounded-md p-2"
+              required
+            />
+          </label>
+          <button
+            type="submit"
+            className="mt-2 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-2 rounded"
+          >
+            Submit
+          </button>
+        </form>
+
+        {predictionResult && (
+          <div className="mt-4 p-4 bg-green-100 border border-green-400 rounded mb-4">
+            <h3>Prediction Result:</h3>
+            <p>Risk Status: {predictionResult.Risk_Status}</p>
+            <p>Risk Type: {predictionResult.Risk_Type}</p>
+          </div>
+        )}
+
+
         {/* Tabs */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm sm:text-lg font-semibold mb-4">
           {/* Students Tab */}
