@@ -2,6 +2,7 @@
 import Banner from "../components/HomePage/Banner";
 import Header from "../components/HomePage/Header";
 import React, { useEffect, useState } from "react";
+import ChatWidget from "../components/ChatWidget";
 import { FaExclamationTriangle, FaUsers, FaSchool, FaMoneyBillWave, FaHeadset, FaChalkboardTeacher, FaHeart, FaLightbulb, FaLaptop, FaClipboardList } from "react-icons/fa";
 
 const AnimatedBox = () => {
@@ -150,8 +151,11 @@ const AnimatedBox = () => {
                             {isOpen ? boxContent[index].description : "Click to open the box."}
                         </p>
                     </div>
+
                 </div>
             ))}
+            <ChatWidget />
+
         </>
     );
 };

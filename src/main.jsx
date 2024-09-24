@@ -27,6 +27,7 @@ import Home_Student from './pages/Home_Student';
 import Home_Parents from './pages/Home_Parents';
 import Home_Teacher from './pages/Home_Teacher';
 import Home_University from './pages/Home_University';
+import NgoDash from "./pages/NgoDash";
 // import Signup from "./components/Signup";
 
 
@@ -52,6 +53,7 @@ const router = createBrowserRouter(
             <Route path="/Home_Parents" element={<Home_Parents />} />
             <Route path="/Home_Teacher" element={<Home_Teacher />} />
             <Route path="/Home_University" element={<Home_University />} />
+            <Route path="/NgoDash" element={<NgoDash />} />
         </Route>
     )
 );

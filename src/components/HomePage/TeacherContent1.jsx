@@ -95,6 +95,9 @@
 
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
+import ClassroomPreview from '../../images/ClassroomPreview.png';
+import AssessmentPreview from "../../images/AssessmentPreview.png";
+import gamified from "../../images/gamified.png";
 
 function TeacherContent1() {
     const { ref: sectionRef, inView: sectionInView } = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -113,7 +116,7 @@ function TeacherContent1() {
             <div className="container mx-auto flex flex-col md:flex-row items-center">
                 {/* Left Image */}
                 <div ref={imageRef1} className={`md:w-1/2 flex justify-center mt-8 md:mt-0 ${imageInView1 ? 'animate-slideInRight' : 'opacity-0'}`}>
-                    <img src="https://www.example.com/classroom.png" alt="Classroom Preview" className="w-full max-w-sm" />
+                    <img src={ClassroomPreview} alt="Classroom Preview" className="w-full max-w-2xl" />
                 </div>
                 {/* Left content */}
                 <div ref={contentRef1} className={`md:w-1/2 ${contentInView1 ? 'animate-slideInLeft' : 'opacity-0'}`}>
@@ -140,7 +143,7 @@ function TeacherContent1() {
                 <div className="flex flex-col md:flex-row items-center mb-12">
                     {/* Left Image */}
                     <div ref={imageRef2} className={`md:w-1/2 flex justify-center md:order-1 ${imageInView2 ? 'animate-slideInLeft' : 'opacity-0'}`}>
-                        <img src="https://www.example.com/assessment.png" alt="Assessment Preview" className="w-full max-w-sm" />
+                        <img src={AssessmentPreview} alt="Assessment Preview" className="w-full max-w-3xl" />
                     </div>
                     {/* Right Content */}
                     <div ref={contentRef2} className={`md:w-1/2 md:pl-10 mt-8 md:mt-0 ${contentInView2 ? 'animate-slideInRight' : 'opacity-0'}`}>
@@ -166,7 +169,7 @@ function TeacherContent1() {
                 <div className="flex flex-col md:flex-row items-center mt-6">
                     {/* Left Image */}
                     <div ref={imageRef3} className={`md:w-1/2 flex justify-center mt-8 md:mt-0 ${imageInView3 ? 'animate-slideInRight' : 'opacity-0'}`}>
-                        <img src="https://www.example.com/classroom.png" alt="Classroom Preview" className="w-full max-w-sm" />
+                        <img src={gamified} alt="Classroom Preview" className="w-full max-w-md" />
                     </div>
                     {/* Right Content */}
                     <div ref={contentRef3} className={`md:w-1/2 md:pr-10 ${contentInView3 ? 'animate-slideInLeft' : 'opacity-0'}`}>
