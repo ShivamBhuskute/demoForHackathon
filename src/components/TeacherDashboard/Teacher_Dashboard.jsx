@@ -61,7 +61,7 @@ const TeacherDashboard = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:3000/api/aI/predict-student`,
+        `backend-for-hackathon.vercel.app/api/aI/predict-student`,
         { uniqueId } // Send 'id' field instead of 'uniqueId'
       );
       console.log("Prediction Result:", response.data);
