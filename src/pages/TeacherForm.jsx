@@ -50,7 +50,7 @@ function TeacherForm() {
 
         try {
             const response = await axios.post(
-                "https://backend-for-hackathon.vercel.app/api/aI/feedback/teacher",
+                "https://quiet-praline-0226c3.netlify.app/api/aI/feedback/teacher",
                 inputs
             );
             console.log("Response:", response.data); // Handle success response
