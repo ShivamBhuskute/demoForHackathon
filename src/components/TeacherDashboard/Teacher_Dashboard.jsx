@@ -72,7 +72,7 @@ const TeacherDashboard = () => {
 
         try {
             const response = await axios.post(
-                `https://your-site-name.netlify.app/.netlify/functions/predict-student`,
+                `https://backend-for-hackathon.vercel.app/api/aI/predict-student`,
                 { uniqueId },
                 {
                     headers: {
