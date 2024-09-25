@@ -72,7 +72,7 @@ const TeacherDashboard = () => {
 
         try {
             const response = await axios.post(
-                `https://quiet-praline-0226c3.netlify.app/api/aI/predict-student`,
+                `https://your-site-name.netlify.app/.netlify/functions/predict-student`,
                 { uniqueId },
                 {
                     headers: {
