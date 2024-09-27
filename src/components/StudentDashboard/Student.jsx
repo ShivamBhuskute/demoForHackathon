@@ -188,8 +188,6 @@
 import React, { useState, useEffect } from "react";
 import Sidebar from "../Sidebar";
 import CourseCard from "../CourseCard";
-import Chart from "../Chart";
-import ProfileCard from "../ProfileCard";
 import Experience from "../Experience";
 import Todo from "../Consult";
 import Class from "../Class";
@@ -197,6 +195,9 @@ import ChatWidget from "../ChatWidget";
 import AttendanceCard from "../parentDashboard/AttendanceCard";
 import { FaSmile, FaBrain, FaClipboardList, FaBell } from "react-icons/fa";
 import StudentInsights from "./StudentInsights";
+import { NavLink } from 'react-router-dom';
+
+
 
 function Student() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -259,7 +260,7 @@ function Student() {
           <div className="col-span-4 flex flex-col bg-blue-200 rounded-md p-4">
             <div className="flex flex-wrap justify-center gap-6">
               {/* Take Test Button with Description */}
-              <div className="bg-gradient-to-r from-green-300 to-green-500 rounded-lg shadow-lg p-6 sm:w-96 w-full mt-5 text-center cursor-pointer transform hover:scale-105 transition-all duration-300">
+              {/* <div className="bg-gradient-to-r from-green-300 to-green-500 rounded-lg shadow-lg p-6 sm:w-96 w-full mt-5 text-center cursor-pointer transform hover:scale-105 transition-all duration-300">
                 <h2 className="text-lg font-bold flex items-center justify-center gap-2">
                   <FaClipboardList />
                   Take Test
@@ -267,7 +268,18 @@ function Student() {
                 <p className="text-sm mt-2">
                   Ready to check your knowledge? Click the button to start a test and track your progress! Remember, testing yourself regularly helps you understand concepts better and boosts your confidence in the subject.
                 </p>
-              </div>
+              </div> */}
+              <NavLink to="/StudentForm">
+                <div className="bg-gradient-to-r from-green-300 to-green-500 rounded-lg shadow-lg p-6 sm:w-96 w-full mt-5 text-center cursor-pointer transform hover:scale-105 transition-all duration-300">
+                  <h2 className="text-lg font-bold flex items-center justify-center gap-2">
+                    <FaClipboardList />
+                    Take Test
+                  </h2>
+                  <p className="text-sm mt-2">
+                    Ready to test yourself?
+                  </p>
+                </div>
+              </NavLink>
             </div>
 
             {/* Course Section */}
