@@ -76,6 +76,8 @@ const TeacherDashboard = () => {
   return (
     <div className="flex">
       {/* Main Content */}
+      <Sidebar />
+
       <div className="flex-1 ml-0 sm:ml-1/4 lg:mr-[20%] sm:mr-1/5 p-4 overflow-auto">
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-center mb-4">
@@ -92,7 +94,6 @@ const TeacherDashboard = () => {
               </button>
             </div>
           </div>
-
           <div className="flex items-center space-x-6 mt-10 sm:mt-0">
             <select className="bg-gray-200 p-2 sm:p-4 rounded-md shadow-md">
               <option>Foundational Stage</option>
