@@ -144,6 +144,15 @@ const TeacherDashboard = () => {
                     </button>
                 </form>
 
+                <NavLink to="/TeacherForm">
+            <div className="bg-gradient-to-r from-green-300 to-green-500 rounded-lg shadow-lg p-6 sm:w-96 w-full text-center cursor-pointer transform hover:scale-105 transition-all duration-300">
+              <h2 className="text-lg font-bold flex items-center justify-center gap-2">
+                <FaClipboardList />
+                Give Student Feedback
+              </h2>
+            </div>
+          </NavLink>
+
                 {predictionResult && (
                     <div className="mt-4 p-4 bg-green-100 border border-green-400 rounded mb-4">
                         <h3>Prediction Result:</h3>
