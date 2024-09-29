@@ -16,8 +16,7 @@ import {
 import { GiBookshelf } from "react-icons/gi";
 import { VscFeedback } from "react-icons/vsc";
 import { SiGoogleclassroom } from "react-icons/si";
-import { NavLink } from 'react-router-dom';
-
+import { NavLink } from "react-router-dom";
 
 const TeacherDashboard = () => {
     const [todos, setTodos] = useState([
@@ -125,33 +124,38 @@ const TeacherDashboard = () => {
                     </div>
                 </div>
 
-                <form onSubmit={handleSubmitUniqueId} className="mb-4">
-                    <label className="block text-sm font-medium text-gray-700">
-                        Enter Student Unique ID:
-                        <input
-                            type="text"
-                            value={uniqueId}
-                            onChange={(e) => setUniqueId(e.target.value)}
-                            className="mt-1 block w-full border border-gray-300 rounded-md p-2"
-                            required
-                        />
-                    </label>
-                    <button
-                        type="submit"
-                        className="mt-2 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-2 rounded"
+                <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
+                    <form
+                        onSubmit={handleSubmitUniqueId}
+                        className="mb-4 w-full sm:w-auto"
                     >
-                        Submit
-                    </button>
-                </form>
+                        <label className="block text-sm font-medium text-gray-700">
+                            Enter Student Unique ID:
+                            <input
+                                type="text"
+                                value={uniqueId}
+                                onChange={(e) => setUniqueId(e.target.value)}
+                                className="mt-1 block w-full border border-gray-300 rounded-md p-2"
+                                required
+                            />
+                        </label>
+                        <button
+                            type="submit"
+                            className="mt-2 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-2 rounded"
+                        >
+                            Submit
+                        </button>
+                    </form>
 
-                <NavLink to="/TeacherForm">
-            <div className="bg-gradient-to-r from-green-300 to-green-500 rounded-lg shadow-lg p-6 sm:w-96 w-full text-center cursor-pointer transform hover:scale-105 transition-all duration-300">
-              <h2 className="text-lg font-bold flex items-center justify-center gap-2">
-                <FaClipboardList />
-                Give Student Feedback
-              </h2>
-            </div>
-          </NavLink>
+                    <NavLink to="/TeacherForm">
+                        <div className="bg-gradient-to-r from-green-300 to-green-500 rounded-lg shadow-lg p-6 sm:w-96 w-full text-center cursor-pointer transform hover:scale-105 transition-all duration-300">
+                            <h2 className="text-lg font-bold flex items-center justify-center gap-2">
+                                <FaClipboardList />
+                                Give Student Feedback
+                            </h2>
+                        </div>
+                    </NavLink>
+                </div>
 
                 {predictionResult && (
                     <div className="mt-4 p-4 bg-green-100 border border-green-400 rounded mb-4">
