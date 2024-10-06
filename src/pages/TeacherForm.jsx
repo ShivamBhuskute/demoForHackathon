@@ -43,14 +43,15 @@ function TeacherForm() {
         }
     };
 
-    axios.defaults.withCredentials = true;
+    // axios.defaults.withCredentials = true;
 
     const handleSubmit = async (event) => {
         event.preventDefault();
 
         try {
             const response = await axios.post(
-                "https://quiet-praline-0226c3.netlify.app/api/aI/feedback/teacher",
+                "http://localhost:3000/api/aI/feedback/teacher",
+                // "https://quiet-praline-0226c3.netlify.app/api/aI/feedback/teacher",
                 inputs
             );
             console.log("Response:", response.data); // Handle success response

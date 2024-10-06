@@ -27,7 +27,7 @@ function StudentForm() {
         return value === "yes" ? 1 : value === "no" ? 0 : null;
     };
 
-    axios.defaults.withCredentials = true;
+    // axios.defaults.withCredentials = true;
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -54,7 +54,8 @@ function StudentForm() {
 
         try {
             const response = await axios.post(
-                "https://backend-for-hackathon.vercel.app/api/aI/feedback/student/",
+                // "https://backend-for-hackathon.vercel.app/api/aI/feedback/student",
+                "http://localhost:3000/api/aI/feedback/student",
                 convertedInputs
             ); // Replace with your backend URL
             console.log(response.data); // Handle response data
